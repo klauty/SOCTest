@@ -1,0 +1,39 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Exames</title>
+</head>
+<body>
+	<div th:switch="${exames}">
+		<h2 th:case="null">Nenhum exame cadastrado</h2>
+
+		<div th:case="*">
+			<h2>Exames</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Exame</th>
+						<th>Resultado</th>
+						<th>Data</th>
+						<th>Editar</th>
+						<th>Deletar</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="exame : ${exames}">
+						<td th:text="${exame.nome_paciente}"></td>
+						<td th:text="${exame.nome_exame}"></td>
+						<td th:text="${exame.resultado}"></td>
+						<td th:text="${exame.data_exame}"></td>
+						<td><a th:href="@{/editar/{id}(id=${exame.id})}"> Editar</a></td>
+						<td><a th:href="@{/deletar/{id}(id=${exame.id})}">Deletar </a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<a href="/novoExame">Cadastrar novo exame</a>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Document</title>
+</head>
+<body>
+	<form action="#" th:action="@{/cadastarExame}" th:object="${exame}"
+		method="post">
+		<div>
+
+			<label for="Nome">Nome</label> <input type="text"
+				th:field="*{nome_paciente}" placeholder="Nome"> <label
+				for="Exame">Exame</label> <input type="text"
+				th:field="*{nome_exame}" placeholder="Exame"> <label
+				for="Resultado">Resultado</label> <input type="text"
+				th:field="*{resultado}" placeholder="Resultado"> <label
+				for="data">Data do Exame</label> <input type="date"
+				th:field="*{data_exame}">
+		</div>
+		<input type="submit" value="Cadastrar">
+
+
+	</form>
+</body>
+</html>
