@@ -1,0 +1,19 @@
+.base{
+	background-color:#a7e6fe; 
+	border-radius: 25px;
+	padding:15px;
+	width: 70%;
+	margin: auto;
+}
+
+tbody{
+ border: 2px solid red;
+ text-align: center;	
+}
+
+.linha{
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	padding:15px;
+}

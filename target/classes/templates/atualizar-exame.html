@@ -3,35 +3,37 @@
 <head>
 <meta charset="UTF-8" />
 <title>Document</title>
+<link rel="stylesheet" type="text/css" href="meuEstilo.css">
 </head>
 <body>
 	<h2>Atualizar Exame</h2>
-	<form action="#" th:action="@{/atualisar/{id}(id=${exame.id})}"
-		th:object="${exame}" method="post">
-
-		<div>
-			<label for="nome">Nome</label> <input type="text"
-				th:field="*{nome_paciente}" placeholder="Nome">
-		</div>
-
-		<div>
-			<label for="exame">Exame</label> <input type="text"
-				th:field="*{nome_exame}" placeholder="Exame">
-		</div>
-
-		<div>
-			<label for="resultado">Resultado</label> <input type="text"
-				th:field="*{resultado}" placeholder="Resultado">
-		</div>
-
-		<label for="data">Data do Exame</label> <input type="date"
-			th:field="*{data_exame}">
-
-		<div>
-			<input type="submit" value="Update User">
-		</div>
-		<a href="\index">Voltar</a>
-	</form>
-
+	<div class="base">
+		<form action="#" th:action="@{/atualisar/{id}(id=${exame.id})}"
+			th:object="${exame}" method="post">
+	
+			<div>
+				<label for="nome">Nome</label> <input type="text"
+					th:field="*{nome_paciente}" placeholder="Nome">
+			</div>
+	
+			<div>
+				<label for="exame">Exame</label> <input type="text"
+					th:field="*{nome_exame}" placeholder="Exame">
+			</div>
+	
+			<div>
+				<label for="resultado">Resultado</label> <input type="text"
+					th:field="*{resultado}" placeholder="Resultado">
+			</div>
+	
+			<label for="data">Data do Exame</label> <input type="date"
+				th:field="*{data_exame}">
+	
+			<div>
+				<input type="submit" value="Update User">
+			</div>
+			<a href="\index">Voltar</a>
+		</form>
+	</div>
 </body>
 </html>

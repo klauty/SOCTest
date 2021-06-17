@@ -3,30 +3,33 @@
 <head>
 <meta charset="UTF-8" />
 <title>Document</title>
+<link rel="stylesheet" type="text/css" href="meuEstilo.css">
 </head>
 <body>
-	<form action="#" th:action="@{/cadastarExame}" th:object="${exame}"
-		method="post">
-		<div>
-				<div>
-					<label for="Nome">Nome</label>
-					<input type="text" th:field="*{nome_paciente}" placeholder="Nome">
-				</div>
-				<div>
-					<label for="Exame">Exame</label> 
-					<input type="text"	th:field="*{nome_exame}" placeholder="Exame">
-				</div>
-				<div>
-					<label	for="Resultado">Resultado</label> 
-					<input type="text"	th:field="*{resultado}" placeholder="Resultado"> 
-				</div>
-				<div>
-					<label	for="data">Data do Exame</label>
-					<input type="date" th:field="*{data_exame}">
-				</div>
-		</div>
-		<input type="submit" value="Cadastrar">
-		<a href="\index">Voltar</a>
-	</form>
+	<div  class="base">
+		<form action="#" th:action="@{/cadastarExame}" th:object="${exame}"
+			method="post">
+			<div >
+					<div class="linha">
+						<label for="Nome">Nome</label>
+						<input type="text" th:field="*{nome_paciente}" placeholder="Nome">
+					</div>
+					<div class="linha">
+						<label for="Exame">Exame</label> 
+						<input type="text"	th:field="*{nome_exame}" placeholder="Exame">
+					</div >
+					<div class="linha">
+						<label	for="Resultado">Resultado</label> 
+						<input type="text"	th:field="*{resultado}" placeholder="Resultado"> 
+					</div>
+					<div class="linha">
+						<label	for="data">Data do Exame</label>
+						<input type="date" th:field="*{data_exame}">
+					</div>
+			</div>
+			<input type="submit" value="Cadastrar">
+			<a href="\index">Voltar</a>
+		</form>
+	</div>
 </body>
 </html>

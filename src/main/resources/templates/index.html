@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <title>Exames</title>
+<link rel="stylesheet" type="text/css" href="meuEstilo.css">
 </head>
 <body>
-	<div th:switch="${exames}">
+	<div class="base" th:switch="${exames}">
 		<h2 th:case="null">Nenhum exame cadastrado</h2>
 
 		<div th:case="*">
@@ -32,8 +33,10 @@
 					</tr>
 				</tbody>
 			</table>
+			
 		</div>
+		<a href="/novoExame">Cadastrar novo exame</a>
 	</div>
-	<a href="/novoExame">Cadastrar novo exame</a>
+	
 </body>
 </html>
